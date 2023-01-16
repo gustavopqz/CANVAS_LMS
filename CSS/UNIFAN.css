@@ -1,0 +1,628 @@
+/* VARIÁVEL DO BACKCANVAS */
+:root{
+    --backCanvas: url("https://gruponobre.instructure.com/users/180/files/2010/preview?verifier=vXImdJ4jTnwE3HDfXzeaKNh6wRiD4JgMjs08QzkI");
+}
+
+/* RETIRAR MENU LATERAL ESQUERDO DE TODAS AS PÁGINAS */
+#header{
+    display: none;
+}
+/* -------------------------------------------------------------------------- */
+
+/* HEADER */
+#newHeader{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(54, 54, 54);
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    height: 55px;
+}
+.headerDiv{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+#topLogo{
+    justify-content: start;
+}
+#topLogo a{
+    padding-left: 10%;
+}
+#navMenu{
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    width: 100%; 
+}
+#centro{
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+.navIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    width: 75px;
+}
+.navIcon a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+.navIcon a p{
+    margin-top: -1px;
+    margin-bottom: -2px;
+}
+@keyframes float {
+    0%{
+        transform: translatey(0px);
+    }
+    50%{
+        transform: translatey(-5px);
+    }
+    100%{
+        transform: translatey(0px);
+    }
+}
+.navIcon:hover .navIconInside{
+    animation: float 2s ease-in-out infinite;
+}
+
+#mainBanner{
+    max-height: 297.34px;
+}
+
+#topEnd{
+    background-color: rgb(90, 90, 90);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: gold;
+    gap: 10px;
+    font-size: 14px;
+    height: 40px;
+}
+#topEnd > img{
+    padding-left: 60px;
+}
+/* -------------------------------------------------------------------------- */
+
+/* ALTERAR DIZERES DA PÁGINA PRINCIPAL E DEIXAR BOTÃO QUE ALTERA VISUALIZAÇÃO */
+.ic-Dashboard-header__title{
+    display: none;
+}
+.ic-DashboardCard__box > span{
+    display: none;
+}
+#DashboardCard_Container > div > div:nth-child(1) > h2{
+    display: none;
+}
+#DashboardCard_Container > div > div:nth-child(2) > h2{
+    display: none;
+}
+.ic-Dashboard-header__layout{
+    background: transparent;
+    display: flex;
+    justify-content: end;
+}
+#dashboard_header_container{
+    position: static;
+}
+/* -------------------------------------------------------------------------- */
+
+/* NOTIFICAÇÃO DE MENSAGENS NÃO LIDAS NO CANVAS MAIL */
+#mainNotification{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
+    box-sizing: border-box;
+}
+#mailNotification{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 2px solid var(--ic-brand-primary);
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgba(0,0,0,.2);
+    margin-bottom: 1%;
+}
+#imageNotification{
+    background-color: #264B8C;
+    padding: 1.8% 0.95%;
+}
+#titleNotification{
+    display: flex;
+    align-items: center;
+    width: 82%;
+    gap: 10px;
+}
+#buttonNotification{
+    width: 18%;
+    padding: 5px 0;
+    background-color: #264B8C;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    transition: ease .4s;
+    margin-right: 2%;
+}
+#buttonNotification:hover{
+    cursor: pointer;
+    background-color: #36A664;
+}
+/* -------------------------------------------------------------------------- */
+
+/* ALTERAR FUNDO PÁGINAS ACCOUNTS */
+#dashboard .PlannerHeader{
+    background-image: var(--backCanvas);
+}
+.PlannerApp .planner-day{
+    background-image: var(--backCanvas);
+}
+#content table thead tr th{
+    background-image: var(--backCanvas);
+}
+#content table tbody tr th{
+    background-image: var(--backCanvas);
+}
+#content table tbody tr td{
+    background-image: var(--backCanvas);
+}
+/* -------------------------------------------------------------------------- */
+
+/* ALTERAÇÕES DA DIV QUEM CONTÉM CARDS DE DISCIPLINA */
+#not_right_side{
+    padding: 20px 0;
+    align-items: center;
+    min-height: 500px;
+}
+/* -------------------------------------------------------------------------- */
+
+/* CENTRALIZANDO LOGO DA LISTA DE ATIVIDADES DA PÁGINA PRINCIPAL */
+#right-side > div.ic-sidebar-logo{
+    display: center;
+    justify-content: center;
+}
+/* -------------------------------------------------------------------------- */
+
+/* CARDS DE DISCIPLINA */
+.ic-DashboardCard{
+    min-width: 22%;
+}
+.ic-DashboardCard__box{
+    box-sizing: border-box;
+    margin-inline: 0;
+    padding-inline: 0;
+}
+.ic-DashboardCard__box__container{
+    width: 100%;
+    margin-inline: 0;
+    padding-inline: 0;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.ic-DashboardCard__header_hero{
+    max-height: 200px;
+}
+#DashboardCard_Container > div > div:nth-child(1) > div > div:nth-child(1) > nav > a.ic-DashboardCard__action.assignments > div > svg{
+    height: 50px;
+}
+.ic-app-header__menu-list-item--active {
+    border-right: 2px solid #111;
+}
+.ic-DashboardCard__header-subtitle{
+    display: none;
+}
+.ic-DashboardCard__header_content{
+    margin: 10px 0;
+    margin-bottom: 20px;
+}
+/* -------------------------------------------------------------------------- */
+
+/* ALINHANDO CONTAINER DOS CARDS */
+#DashboardCard_Container{
+    margin-top: 1%;
+}
+
+/* FAIXA COM ATALHOS */
+#shortcuts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #757575;
+    padding: 30px 0 65px 0;
+    margin-bottom: 3%;
+}
+#shortcutsTitle{
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+#divCards{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    min-width: 200px;
+}
+.card h3{
+    font-size: 18px;
+}
+.card button{
+    background-color: #264B8C;
+    border: none;
+    cursor: pointer;
+    padding: 5px 70px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: ease .4s;
+    color: #fff;
+}
+.card button:hover{
+    background-color: #36A664;
+}
+/* -------------------------------------------------------------------------- */
+
+/* ADICIONANDO BACKGROUND EM TODAS AS PÁGINAS */
+#wrapper{
+    background-image: var(--backCanvas);
+    margin-left: 0;
+}
+/* -------------------------------------------------------------------------- */
+
+/* MENU LATERAL DE SUBPÁGINAS */
+#section-tabs {
+    position: relative;
+}
+
+#section-tabs li {
+    position: relative;
+    left: 0;
+    margin: 4px 0;
+    border-left: 2px solid black;
+    transition: 0.5s;
+    outline: none;
+}
+
+#section-tabs li::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #264B8C;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.5s;
+}
+
+#section-tabs li:hover::before {
+    transform: scaleX(1) !important;
+}
+
+#section-tabs li:hover{
+    left: 10px;
+}
+
+#section-tabs li a {
+    position: relative;
+    padding: 8px;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+    color: #264B8C;
+    outline: none;
+}
+
+#section-tabs li:hover a {
+    color: #fff;
+    text-decoration: none !important;
+}
+
+.active {
+    border: none !important;
+    background-color: #264B8C;
+    width: 100%;
+    height: 100%;
+    color: #fff !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+}
+/* -------------------------------------------------------------------------- */
+
+/* CURSOS */
+/* COURSES MAIN PAGE CARDS*/
+#frontPage {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    gap: 4%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.courseIcon {
+    background-color: #F5F5F5;
+    box-shadow: 0 0 2px #000;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #000;
+    transition: ease-in .2s;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.courseIcon > p{
+    text-align: center; 
+}
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+.courseIcon:hover > img{
+    animation: scale 2.5s infinite;
+}
+.courseIcon p{
+    margin-bottom: 10%;
+}
+
+#divider{
+    margin-top: 20px;
+    width: 100%;
+}
+/* -------------------------------------------------------------------------- */
+/* CENTRALIZAR NOME DA DISCIPLINA E ADICIONAR BACKGROUND */
+.page-toolbar > .page-toolbar-start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5%;
+}
+.header-bar{
+    background: var(--backCanvas);
+}
+/* -------------------------------------------------------------------------- */
+/* BOTÃO VOLTAR À PÁGINA ANTERIOR */
+#headerButton{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    transition: ease .3s;
+}
+#headerButton:hover{
+    color: #1d407c;
+    cursor: pointer;
+}
+/* -------------------------------------------------------------------------- */
+/* FUNDO NA PÁGINA DE CONTEÚDO ONLINE */
+#context_modules_sortable_container{
+    background-image: var(--backCanvas);
+}
+/* -------------------------------------------------------------------------- */
+/* PÁGINA DENTRO DA DISCIPLINA */
+.view_all_pages{
+    display: none;
+}
+/* INSTRUÇÕES EM EXERCÍCIOS E AVALIAÇÕES */
+#instructionBox{
+    max-width: 192vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 33px;
+    background: var(--backCanvas);
+    font-family: inherit;
+}
+#instructionTitle{
+    padding: 10px 0 10px 10px;
+    background-color: #f5f5f5;
+    border: solid 1px #d3d3d3;
+    display: flex;
+    align-items: center;
+}
+#instructionTitle h3{
+    padding-left: 5px;
+}
+.instruction{
+    padding: 5px 0 5px 10px;
+    border: solid 1px #d3d3d3;
+    background-color: #fff;
+}
+/* -------------------------------------------------------------------------- */
+/* FUNDO DA DIV QUE CONTÉM AS AVALIAÇÕES */
+#ag-list{
+    background-image: var(--backCanvas);
+}
+/* -------------------------------------------------------------------------- */
+/* RETIRAR BOTÕES PARA COMANDOS QUE SÓ APARECERÁ PARA PROFESSORES VIA JS */
+.with-right-side #right-side-wrapper{
+    display: none;
+}
+#sticky-container{
+    overflow: hidden;
+    display: none;
+}
+#main{
+    margin-left: 0;
+}
+/* -------------------------------------------------------------------------- */
+/* PÁGINA DO FÓRUM - RETIRAR FÓRUNS NÃO UTILIZADOS*/
+.pinned-discussions-v2__wrapper{
+    display: none;
+}
+.unpinned-discussions-v2__wrapper{
+    border-bottom: 1px solid #C7CDD1;
+}
+.closed-for-comments-discussions-v2__wrapper{
+    display: none;
+}
+/* -------------------------------------------------------------------------- */
+/* FUNDO DA PÁGINA DE TUTORIAS ONLINE */
+.item-group-container{
+    background-image: var(--backCanvas);
+}
+/* -------------------------------------------------------------------------- */
+/* PÁGINA DE ASSIGNMENTS DOS ALUNOS */
+#assignments{
+    background-image: var(--backCanvas);
+}
+.icon-quiz{
+    content: url("https://gruponobre.instructure.com/users/180/files/1827/preview?verifier=gXDesXsGxEI7k2RzT6WlkQR3Npy2C1ZYlB8wfFjD");
+    width: 30px;
+}
+.icon-discussion{
+    content: url("https://gruponobre.instructure.com/users/180/files/1826/preview?verifier=vNo4XzIa8rbmffQb0aWpMXEdeorhIYGhk09ONLuO");
+    width: 30px;
+}
+.icon-assignment{
+    content: url("https://gruponobre.instructure.com/users/180/files/1828/preview?verifier=kQOZagiyFqzJgnPAeho9nRP6LIvRBlElnFNn8pVz");
+    width: 30px;
+}
+/* -------------------------------------------------------------------------- */
+/* DENTRO DOS ASSIGNMENTS (AVALIAÇÕES) */
+#assignments-2-student-header{
+    background-image: var(--backCanvas);
+}
+/* -------------------------------------------------------------------------- */
+/* BOTÃO PARA RETORNAR À PÁGINA ANTERIOR NAS DISCIPLINAS */
+#courseReturnButton{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: ease .3s;
+}
+#courseReturnButton:hover{
+    color: #1d407c;
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* PÁGINA DO SPEEDGRADER */
+#rightside_inner .content_box{
+    background-image: var(--backCanvas);
+}
+#quitSpeedgrader{
+    display: flex;
+    justify-content: center;
+}
+#quitSpeedgrader button{
+        background-color: #264B8C;
+        border: 1px solid #111;
+        width: 80%;
+        height: 40px;
+        border-radius: 3px;
+        transition: ease .3s;
+}
+#quitSpeedgrader button:hover{
+    cursor: pointer;
+    background-color: #1d407c;
+}
+/* -------------------------------------------------------------------------- */
+
+/* COORDENADORES DE CURSO */
+#coordPage {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    gap: 8%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#titleCoordPage{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+/* -------------------------------------------------------------------------- */
+
+/* BOTÕES ADICIONAIS PARA PROFESSORES */
+#createTest{
+    width:100%;
+    background-color: #F5F5F5;
+    border: 1px solid rgb(211, 211, 211);
+    height: 45px;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    transition: ease .3s;
+}
+#createTest:hover{
+    background-color: #E8E8E8;
+}
+#createExercise{
+    width:100%;
+    background-color: #F5F5F5;
+    border: 1px solid rgb(211, 211, 211);
+    height: 45px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    transition: ease .3s;
+}
+#createExercise:hover{
+    background-color: #E8E8E8;
+}
+/* -------------------------------------------------------------------------- */
+
+/* ADICIONANDO BACKGROUND NOS TÍTULOS DE PÁGINA AO LADO DO BOTÃO SANDUÍCHE PRESENTE EM: PROFILE, ACCOUNTS, ETC */
+#breadcrumbs{
+    background-image: var(--backCanvas);
+}
+/* -------------------------------------------------------------------------- */
+
+/* PÁGINA CALENDÁRIO */
+#calendar-list-holder{
+    background: transparent;
+}
+/* -------------------------------------------------------------------------- */
+
+/* PÁGINA E-MAIL CANVAS  */
+.panel{
+    margin-top: 35px;
+    padding: 48px 0 35px 0;
+}
+.messaging-wrapper{
+    margin-top: 35px;
+}
+/* -------------------------------------------------------------------------- */
